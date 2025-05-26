@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #06b6d4;
+  --primary-light: #67e8f9;
+  --secondary: #8b5cf6;
+  --accent: #f59e0b;
+  --success: #10b981;
+  --warning: #f97316;
+  --error: #ef4444;
+  --background: #f8fafc;
+  --foreground: #1e293b;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--foreground);
+  background-color: var(--background);
+  min-height: 100vh;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300;
+}
+
+.card:hover {
+  @apply shadow-lg transform hover:-translate-y-1;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 flex items-center justify-center gap-2;
+}
+
+.btn-primary {
+  @apply bg-cyan-500 text-white hover:bg-cyan-600;
+}
+
+.btn-secondary {
+  @apply bg-violet-500 text-white hover:bg-violet-600;
+}
+
+.btn-accent {
+  @apply bg-amber-500 text-white hover:bg-amber-600;
+}
+
+.btn-outline {
+  @apply border border-gray-300 hover:bg-gray-100;
+}
+
+.btn-success {
+  @apply bg-emerald-500 text-white hover:bg-emerald-600;
+}
+
+.btn-warning {
+  @apply bg-orange-500 text-white hover:bg-orange-600;
+}
+
+.btn-error {
+  @apply bg-red-500 text-white hover:bg-red-600;
+}
+
+.input {
+  @apply px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent;
+}
+
+.progress-container {
+  @apply w-full bg-gray-200 rounded-full h-2.5;
+}
+
+.progress-bar {
+  @apply bg-gradient-to-r from-cyan-500 to-violet-500 h-2.5 rounded-full transition-all duration-500;
+}
+
+.label {
+  @apply text-sm font-medium text-gray-700 mb-1 block;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-violet-500;
+}
